@@ -12,7 +12,7 @@ function Card({ title, description, image, buttonLabel = "Comprar Ahora" }) {
           {description}
         </p>
 
-        <Button />
+        <Button text={buttonLabel} />
       </div>
     </div>
   )
