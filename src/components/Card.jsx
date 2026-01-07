@@ -9,7 +9,7 @@ function Card({ title, description, image }) {
       <img
         className="w-full h-64 object-cover"
         src={image}
-        alt="Sample image"
+        alt="Imagen de muestra"
       />
 
       <div className="p-4 text-center">

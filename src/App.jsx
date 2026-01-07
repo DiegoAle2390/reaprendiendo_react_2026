@@ -1,5 +1,7 @@
 import "./App.css";
 import Card from "./components/Card";
+// import Headers from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   const data = [
@@ -21,23 +23,27 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4">
-      <h1 className="text-blue-600 dark:text-blue-400 border-2 p-4 rounded-xl mb-4">
-        Modificado con OpenCode DiegoAle
-      </h1>
+    <>
+      <Hero />
+      {/* <Headers /> */}
 
-      <div className="flex gap-4 flex-wrap justify-center">
-        {data.map((item, index) => (
-          <Card
-            key={index}
-            title={item.title}
-            description={item.description}
-            image={item.image}
-            buttonLabel={item.buttonLabel}
-          />
-        ))}
+      <div className="max-w-7xl mx-auto flex flex-col items-center">
+        <h1 className="text-blue-600 dark:text-blue-400 border-2 p-4 rounded-xl mb-4">
+          Modificado con OpenCode DiegoAle
+        </h1>
+
+        <div className="flex gap-4 flex-wrap justify-center">
+          {data.map((item, index) => (
+            <Card
+              key={index}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
