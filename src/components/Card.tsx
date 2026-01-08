@@ -1,6 +1,12 @@
 import Button from "./Button";
 
-function Card({ title, description, image }) {
+interface CardProps {
+  title: string;
+  description: string;
+  image: string;
+}
+
+function Card({ title, description, image }: CardProps) {
   return (
     <div
       id="card1"

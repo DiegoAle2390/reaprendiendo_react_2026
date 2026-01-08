@@ -2,6 +2,8 @@ import "./App.css";
 import Card from "./components/Card";
 // import Headers from "./components/Header";
 import Hero from "./components/Hero";
+import { Button } from "./components/ui/button";
+import { TextHoverEffect } from "./components/ui/text-hover-effect";
 
 function App() {
   const data = [
@@ -28,9 +30,9 @@ function App() {
       {/* <Headers /> */}
 
       <div className="max-w-7xl mx-auto flex flex-col items-center">
-        <h1 className="text-blue-600 dark:text-blue-400 border-2 p-4 rounded-xl mb-4">
-          Modificado con OpenCode DiegoAle
-        </h1>
+        <div className="h-80 flex items-center justify-center">
+          <TextHoverEffect text="DiegoAle" />
+        </div>
 
         <div className="flex gap-4 flex-wrap justify-center">
           {data.map((item, index) => (
@@ -43,6 +45,8 @@ function App() {
           ))}
         </div>
       </div>
+
+      <Button>Clickeame</Button>
     </>
   );
 }
